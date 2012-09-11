@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadOnlyCollections", "ReadOnlyCollections\ReadOnlyCollections.csproj", "{B03DFD25-C72E-4A3B-8FBA-454473E7962C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadOnlyCollectionsInterfaces", "ReadOnlyCollectionsInterfaces\ReadOnlyCollectionsInterfaces.csproj", "{B03DFD25-C72E-4A3B-8FBA-454473E7962C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
