@@ -30,19 +30,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFrameworkVersion)' == 'v2.0'">
-      <DefineConstants>NET20</DefineConstants>
+    <DefineConstants>NET20</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFrameworkVersion)' == 'v4.0'">
-      <DefineConstants>NET40</DefineConstants>
+    <DefineConstants>NET40</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(TargetFrameworkVersion)' == 'v4.5'">
-      <DefineConstants>NET45</DefineConstants>
+    <DefineConstants>NET45</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
+  <ItemGroup Condition="'$(TargetFrameworkVersion)' != 'v4.5'">
+    <Compile Include="Interfaces.cs"/>
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFrameworkVersion)' == 'v4.5'">
+    <Compile Include="TypeForwarding.cs"/>
+  </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
