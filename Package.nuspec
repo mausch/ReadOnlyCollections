@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>ReadOnlyCollectionInterfaces</id>
+    <version>1.0.0</version>
+    <authors>Mauricio Scheffer</authors>
+    <owners>mausch</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Backported read-only collection interfaces</description>
+    <copyright>Copyright Mauricio Scheffer 2012</copyright>
+  </metadata>
+  <files>
+    <file src="ReadOnlyCollectionsInterfaces\bin\v2.0\Release\ReadOnlyCollectionsInterfaces.dll" target="lib\NET20"/>
+    <file src="ReadOnlyCollectionsInterfaces\bin\v4.0\Release\ReadOnlyCollectionsInterfaces.dll" target="lib\NET40"/>
+    <file src="ReadOnlyCollectionsInterfaces\bin\v4.5\Release\ReadOnlyCollectionsInterfaces.dll" target="lib\NET45"/>
+  </files>
+</package>

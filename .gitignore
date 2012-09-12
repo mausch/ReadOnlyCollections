@@ -1,4 +1,5 @@
 *.suo
+*.cache
 */bin
 */obj
 _ReSharper.*
