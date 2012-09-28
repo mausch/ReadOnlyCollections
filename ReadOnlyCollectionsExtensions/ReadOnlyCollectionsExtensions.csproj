@@ -46,7 +46,7 @@
     <Compile Include="ReadOnlyListWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ReadOnlyCollectionsInterfaces\ReadOnlyCollectionsInterfaces.csproj">
+    <ProjectReference Include="..\ReadOnlyCollectionsInterfaces\ReadOnlyCollectionsInterfaces.csproj" Condition=" '$(TargetFrameworkVersion)' != 'v4.5' ">
       <Project>{b03dfd25-c72e-4a3b-8fba-454473e7962c}</Project>
       <Name>ReadOnlyCollectionsInterfaces</Name>
     </ProjectReference>
