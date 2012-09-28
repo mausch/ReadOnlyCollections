@@ -17,6 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\$(TargetFrameworkVersion)\Debug\</OutputPath>
+    <BaseIntermediateOutputPath>obj\$(TargetFrameworkVersion)\</BaseIntermediateOutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -25,29 +26,24 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\$(TargetFrameworkVersion)\Release\</OutputPath>
+    <BaseIntermediateOutputPath>obj\$(TargetFrameworkVersion)\</BaseIntermediateOutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(TargetFrameworkVersion)' == 'v2.0'">
+  <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v2.0' ">
     <DefineConstants>NET20</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(TargetFrameworkVersion)' == 'v4.0'">
+  <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v4.0' ">
     <DefineConstants>NET40</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(TargetFrameworkVersion)' == 'v4.5'">
+  <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v4.5' ">
     <DefineConstants>NET45</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFrameworkVersion)' != 'v4.5'">
-    <Compile Include="Interfaces.cs"/>
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFrameworkVersion)' == 'v4.5'">
-    <Compile Include="TypeForwarding.cs"/>
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="Interfaces.cs" Condition=" '$(TargetFrameworkVersion)' != 'v4.5' "/>
+    <Compile Include="TypeForwarding.cs" Condition=" '$(TargetFrameworkVersion)' == 'v4.5' "/>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
