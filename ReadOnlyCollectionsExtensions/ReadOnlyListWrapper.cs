@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace System.Collections.Generic {
+namespace ReadOnlyCollectionsExtensions.Wrappers {
     public class ReadOnlyListWrapper<T> : IReadOnlyList<T> {
         private readonly IList<T> list;
 

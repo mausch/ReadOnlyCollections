@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace System.Collections.Generic {
+namespace ReadOnlyCollectionsExtensions.Wrappers {
     public class ReadOnlyDictionaryWrapper<K, V> : IReadOnlyDictionary<K, V> {
         private readonly IDictionary<K, V> dict;
 
