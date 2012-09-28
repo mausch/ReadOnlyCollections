@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LinqBridge" Condition=" '$(TargetFrameworkVersion)' == 'v2.0' ">
+      <HintPath>..\packages\LinqBridge.1.3.0\lib\net20\LinqBridge.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" Condition=" '$(TargetFrameworkVersion)' != 'v2.0' " />
   </ItemGroup>
@@ -47,6 +50,9 @@
       <Project>{b03dfd25-c72e-4a3b-8fba-454473e7962c}</Project>
       <Name>ReadOnlyCollectionsInterfaces</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
