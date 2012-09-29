@@ -1,5 +1,6 @@
 *.suo
 *.cache
+*.nupkg
 */bin
 */obj
 _ReSharper.*
