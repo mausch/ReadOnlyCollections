@@ -34,6 +34,9 @@
   <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v2.0' ">
     <DefineConstants>NET20</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v3.5' ">
+    <DefineConstants>NET35</DefineConstants>
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v4.0' ">
     <DefineConstants>NET40</DefineConstants>
   </PropertyGroup>
