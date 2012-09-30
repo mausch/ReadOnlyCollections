@@ -22,9 +22,9 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="ReadOnlyCollectionsExtensions\bin\v2.0\Release\ReadOnlyCollectionsExtensions.dll" target="lib\NET20"/>
-    <file src="ReadOnlyCollectionsExtensions\bin\v3.5\Release\ReadOnlyCollectionsExtensions.dll" target="lib\NET35"/>
-    <file src="ReadOnlyCollectionsExtensions\bin\v4.0\Release\ReadOnlyCollectionsExtensions.dll" target="lib\NET40-client"/>
-    <file src="ReadOnlyCollectionsExtensions\bin\v4.5\Release\ReadOnlyCollectionsExtensions.dll" target="lib\NET45"/>
+    <file src="ReadOnlyCollectionsExtensions\bin\v2.0\Release\ReadOnlyCollectionsExtensions.*" target="lib\NET20"/>
+    <file src="ReadOnlyCollectionsExtensions\bin\v3.5\Release\ReadOnlyCollectionsExtensions.*" target="lib\NET35"/>
+    <file src="ReadOnlyCollectionsExtensions\bin\v4.0\Release\ReadOnlyCollectionsExtensions.*" target="lib\NET40-client"/>
+    <file src="ReadOnlyCollectionsExtensions\bin\v4.5\Release\ReadOnlyCollectionsExtensions.*" target="lib\NET45"/>
   </files>
 </package>
