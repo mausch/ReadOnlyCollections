@@ -5,9 +5,12 @@
     <version>1.0.0</version>
     <authors>Mauricio Scheffer</authors>
     <owners>mausch</owners>
+    <licenseUrl>https://github.com/mausch/ReadOnlyCollections/blob/master/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Extensions/adapters around read-only collection interfaces</description>
-    <copyright>Copyright Mauricio Scheffer 2012</copyright>
+    <copyright>Copyright Mauricio Scheffer 2012-2013</copyright>
+    <projectUrl>https://www.ohloh.net/p/ReadOnlyCollections</projectUrl>
+    <tags>readonly collections backport</tags>
     <dependencies>
       <group targetFramework="net20">
         <dependency id="LinqBridge" version="1.3.0"/>

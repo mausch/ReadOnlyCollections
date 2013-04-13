@@ -5,9 +5,12 @@
     <version>1.0.0</version>
     <authors>Mauricio Scheffer</authors>
     <owners>mausch</owners>
+    <licenseUrl>https://github.com/mausch/ReadOnlyCollections/blob/master/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Backported read-only collection interfaces</description>
-    <copyright>Copyright Mauricio Scheffer 2012</copyright>
+    <copyright>Copyright Mauricio Scheffer 2012-2013</copyright>
+    <projectUrl>https://www.ohloh.net/p/ReadOnlyCollections</projectUrl>
+    <tags>readonly collections backport</tags>
   </metadata>
   <files>
     <file src="ReadOnlyCollectionsInterfaces\bin\v2.0\Release\ReadOnlyCollectionsInterfaces.*" target="lib\NET20"/>
