@@ -26,3 +26,5 @@ IReadOnlyDictionary<TKey, TValue> ToReadOnlyDictionary<TKey, TValue>(this IEnume
 IReadOnlyDictionary<TKey, TValue> ToReadOnlyDictionary<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> dict, IEqualityComparer<TKey> comparer)
 IReadOnlyDictionary<TKey, TValue> AsReadOnlyDictionary<TKey, TValue>(this IDictionary<TKey, TValue> dict)
 ```
+
+[**Binaries available on NuGet.**](https://nuget.org/packages?q=ReadOnlyCollection)
