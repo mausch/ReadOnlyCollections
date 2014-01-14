@@ -28,6 +28,14 @@ namespace ReadOnlyCollectionsExtensions {
             return new ReadOnlyListWrapper<T>(source);
         }
 
+        public static IReadOnlyList<T> AsReadOnlyList<T>(this ArraySegment<T> source) {
+#if NET45
+            return source;
+#else
+            return new ArraySegmentWrapper<T>(source);
+#endif
+        }
+
         /// <summary>
         /// Creates a new read-only list from an <see cref="IEnumerable{T}"/>
         /// </summary>

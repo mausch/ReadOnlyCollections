@@ -35,6 +35,9 @@
   <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v4.0' ">
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v4.5' ">
+    <DefineConstants>NET45</DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="LinqBridge" Condition=" '$(TargetFrameworkVersion)' == 'v2.0' ">
       <HintPath>..\packages\LinqBridge.1.3.0\lib\net20\LinqBridge.dll</HintPath>
@@ -43,6 +46,7 @@
     <Reference Include="System.Core" Condition=" '$(TargetFrameworkVersion)' != 'v2.0' " />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArraySegmentWrapper.cs" Condition=" '$(TargetFrameworkVersion)' != 'v4.5' "/>
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadOnlyCollectionWrapper.cs" />
