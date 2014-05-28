@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace ReadOnlyCollectionsExtensions.Wrappers {
@@ -6,6 +7,8 @@ namespace ReadOnlyCollectionsExtensions.Wrappers {
         private readonly IDictionary<K, V> dict;
 
         public ReadOnlyDictionaryWrapper(IDictionary<K, V> dict) {
+            if (dict == null)
+                throw new ArgumentNullException("dict");
             this.dict = dict;
         }
 

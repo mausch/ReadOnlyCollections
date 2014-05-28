@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace ReadOnlyCollectionsExtensions.Wrappers {
@@ -6,6 +7,8 @@ namespace ReadOnlyCollectionsExtensions.Wrappers {
         private readonly IList<T> list;
 
         public ReadOnlyListWrapper(IList<T> list) {
+            if (list == null)
+                throw new ArgumentNullException("list");
             this.list = list;
         }
 

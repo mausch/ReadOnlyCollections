@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace ReadOnlyCollectionsExtensions.Wrappers {
@@ -6,6 +7,8 @@ namespace ReadOnlyCollectionsExtensions.Wrappers {
         private readonly ICollection<T> source;
 
         public ReadOnlyCollectionWrapper(ICollection<T> source) {
+            if (source == null)
+                throw new ArgumentNullException("source");
             this.source = source;
         }
 
