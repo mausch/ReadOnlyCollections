@@ -15,6 +15,8 @@ namespace ReadOnlyCollectionsExtensions {
         /// <param name="source"></param>
         /// <returns></returns>
         public static IReadOnlyCollection<T> AsReadOnlyCollection<T>(this ICollection<T> source) {
+            if (source == null)
+                return null;
             return new ReadOnlyCollectionWrapper<T>(source);
         }
 
@@ -25,6 +27,8 @@ namespace ReadOnlyCollectionsExtensions {
         /// <param name="source"></param>
         /// <returns></returns>
         public static IReadOnlyList<T> AsReadOnlyList<T>(this IList<T> source) {
+            if (source == null)
+                return null;
             return new ReadOnlyListWrapper<T>(source);
         }
 
@@ -106,6 +110,8 @@ namespace ReadOnlyCollectionsExtensions {
         /// <param name="dict"></param>
         /// <returns></returns>
         public static IReadOnlyDictionary<TKey, TValue> AsReadOnlyDictionary<TKey, TValue>(this IDictionary<TKey, TValue> dict) {
+            if (dict == null)
+                return null;
             return new ReadOnlyDictionaryWrapper<TKey, TValue>(dict);
         }
     }
