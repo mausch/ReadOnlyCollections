@@ -33,10 +33,10 @@ namespace ReadOnlyCollectionsExtensions {
         }
 
         public static IReadOnlyList<T> AsReadOnlyList<T>(this ArraySegment<T> source) {
-#if NET45
-            return source;
-#else
+#if LEGACY
             return new ArraySegmentWrapper<T>(source);
+#else
+            return source;
 #endif
         }
 
