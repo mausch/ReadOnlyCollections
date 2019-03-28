@@ -17,9 +17,9 @@
 
     <PackageId>ReadOnlyCollectionsInterfaces</PackageId>
     <Title>ReadOnlyCollectionsInterfaces</Title>
-    <Copyright>Copyright Mauricio Scheffer 2012-2014</Copyright>
+    <Copyright>Copyright Mauricio Scheffer 2012-2019</Copyright>
     <PackageTags>readonly;collections;backport</PackageTags>
-    <PackageProjectUrl>https://www.ohloh.net/p/ReadOnlyCollections</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/mausch/ReadOnlyCollections</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/mausch/ReadOnlyCollections/blob/master/license.txt</PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 
