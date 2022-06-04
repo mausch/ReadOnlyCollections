@@ -37,8 +37,4 @@
     <Compile Include="TypeForwarding.cs" CCondition="'$(TargetFramework)' == 'net45'" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
-
 </Project>
