@@ -10,7 +10,7 @@
     <FileVersion>1.1.0.0</FileVersion>
 
     <Authors>Mauricio Scheffer</Authors>
-    <TargetFrameworks>net20;net35;net40;net45;</TargetFrameworks>
+    <TargetFrameworks>net20;net35;net462;</TargetFrameworks>
     <OutputTypeEx>Library</OutputTypeEx>
 
     <PackageId>ReadOnlyCollectionsInterfaces</PackageId>
@@ -31,8 +31,8 @@
 
   <ItemGroup>
     <Reference Include="System" />
-    <Compile Include="Interfaces.cs" Condition="'$(TargetFramework)' != 'net45'" />
-    <Compile Include="TypeForwarding.cs" CCondition="'$(TargetFramework)' == 'net45'" />
+    <Compile Include="Interfaces.cs" Condition="'$(TargetFramework)' != 'net462'" />
+    <Compile Include="TypeForwarding.cs" CCondition="'$(TargetFramework)' == 'net462'" />
   </ItemGroup>
 
 </Project>

@@ -5,7 +5,7 @@ Backported read-only collection interfaces and extensions/adapters around them.
 
 This repository contains two projects:
 
-**ReadOnlyCollectionsInterfaces** is a backport of the new IReadOnly* interfaces in .NET 4.5, making them available to .NET 2.0 up to .NET 4.0
+**ReadOnlyCollectionsInterfaces** is a backport of the new IReadOnly* interfaces, making them available to .NET 2.0 up to .NET 4.6.2
 
 The interfaces are:
 

@@ -10,7 +10,7 @@
     <FileVersion>1.4.0.0</FileVersion>
 
     <Authors>Mauricio Scheffer</Authors>
-    <TargetFrameworks>netstandard1.0;netstandard2.0;net20;net35;net40;net45;</TargetFrameworks>
+    <TargetFrameworks>netstandard1.0;netstandard2.0;net20;net35;net462;</TargetFrameworks>
     <OutputTypeEx>Library</OutputTypeEx>
 
     <PackageId>ReadOnlyCollectionExtensions</PackageId>
@@ -29,7 +29,7 @@
   <PropertyGroup Condition="'$(TargetFramework)' == 'net35' ">
     <DefineConstants>$(DefineConstants);LEGACY</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net40' ">
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net462' ">
     <DefineConstants>$(DefineConstants);LEGACY</DefineConstants>
   </PropertyGroup>
   
@@ -45,17 +45,13 @@
     <ProjectReference Include="..\ReadOnlyCollectionsInterfaces\ReadOnlyCollectionsInterfaces.csproj" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <ProjectReference Include="..\ReadOnlyCollectionsInterfaces\ReadOnlyCollectionsInterfaces.csproj" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net462'">
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
 
-
+  <ItemGroup Condition="'$(TargetFramework)' != 'netstandard1.0' AND '$(TargetFramework)' != 'netstandard2.0'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2"/>
+  </ItemGroup>
 
 </Project>

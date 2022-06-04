@@ -5,7 +5,7 @@ namespace System.Collections.Generic {
     /// Read-only collection of elements.
     /// </summary>
     /// <typeparam name="T">Element type.</typeparam>
-#if NET40
+#if NET462
     public interface IReadOnlyCollection<out T> : IEnumerable<T> {
 #elif NET20 || NET35
     public interface IReadOnlyCollection<T> : IEnumerable<T> {
@@ -20,7 +20,7 @@ namespace System.Collections.Generic {
     /// Read-only list of elements.
     /// </summary>
     /// <typeparam name="T">Element type.</typeparam>
-#if NET40
+#if NET462
     public interface IReadOnlyList<out T> : IReadOnlyCollection<T> {
 #elif NET20 || NET35
     public interface IReadOnlyList<T> : IReadOnlyCollection<T> {
