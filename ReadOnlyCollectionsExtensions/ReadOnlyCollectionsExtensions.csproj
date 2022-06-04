@@ -10,7 +10,7 @@
     <FileVersion>1.4.0.0</FileVersion>
 
     <Authors>Mauricio Scheffer</Authors>
-    <TargetFrameworks>netstandard1.0;netstandard2.0;netstandard2.1;net20;net35;net462;</TargetFrameworks>
+    <TargetFrameworks>netstandard1.0;netstandard2.0;netstandard2.1;net20;net35;net462;net5.0</TargetFrameworks>
     <OutputTypeEx>Library</OutputTypeEx>
 
     <PackageId>ReadOnlyCollectionExtensions</PackageId>
