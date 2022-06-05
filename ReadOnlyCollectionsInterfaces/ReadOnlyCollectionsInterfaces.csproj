@@ -30,7 +30,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="System" />
     <Compile Include="Interfaces.cs" Condition="'$(TargetFramework)' != 'net462'" />
     <Compile Include="TypeForwarding.cs" CCondition="'$(TargetFramework)' == 'net462'" />
   </ItemGroup>
