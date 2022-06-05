@@ -1,5 +1,5 @@
 $ErrorActionPreference = "Stop"
-dotnet pack -c Release -o ..\.nuget
+dotnet build -c Release
 echo "Testing .NET 3.5"
 dotnet run --project Tests\Tests.csproj --framework net35
 echo "Testing .NET 4.6.2"
