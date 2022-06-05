@@ -5,9 +5,9 @@
     <AssemblyTitle>ReadOnlyCollectionsInterfaces</AssemblyTitle>
     <AssemblyName>ReadOnlyCollectionsInterfaces</AssemblyName>
 
-    <Version>1.1.0</Version>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.2.0</Version>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
 
     <Authors>Mauricio Scheffer</Authors>
     <TargetFrameworks>netstandard1.0;netstandard2.0;netstandard2.1;net20;net35;net462;net5.0;net6.0</TargetFrameworks>
