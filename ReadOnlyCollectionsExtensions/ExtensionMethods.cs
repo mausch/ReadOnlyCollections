@@ -114,5 +114,20 @@ namespace ReadOnlyCollectionsExtensions {
                 return null;
             return new ReadOnlyDictionaryWrapper<TKey, TValue>(dict);
         }
+#if !NET20
+#if NET35
+        public static IReadOnlySet<T> AsReadOnlySet<T>(this HashSet<T> source)
+#else
+        public static IReadOnlySet<T> AsReadOnlySet<T>(this ISet<T> source)
+#endif
+        {
+            return new ReadOnlySetWrapper<T>(source);
+        }
+
+        public static IReadOnlySet<T> ToReadOnlySet<T>(this IEnumerable<T> source)
+        {
+            return new ReadOnlySetWrapper<T>(new HashSet<T>(source));
+        }
+#endif
     }
 }

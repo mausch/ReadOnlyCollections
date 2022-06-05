@@ -10,7 +10,7 @@
     <FileVersion>1.1.0.0</FileVersion>
 
     <Authors>Mauricio Scheffer</Authors>
-    <TargetFrameworks>net20;net35;net462;</TargetFrameworks>
+    <TargetFrameworks>netstandard1.0;netstandard2.0;net20;net35;net462;</TargetFrameworks>
     <OutputTypeEx>Library</OutputTypeEx>
 
     <PackageId>ReadOnlyCollectionsInterfaces</PackageId>
@@ -27,11 +27,13 @@
   <ItemGroup>
     <None Remove="Interfaces.cs" />
     <None Remove="TypeForwarding.cs" />
+    <None Remove="IReadOnlySet.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Interfaces.cs" Condition="'$(TargetFramework)' != 'net462'" />
-    <Compile Include="TypeForwarding.cs" CCondition="'$(TargetFramework)' == 'net462'" />
+    <Compile Include="Interfaces.cs" Condition="'$(TargetFramework)' == 'net20' OR '$(TargetFramework)' == 'net35'" />
+    <Compile Include="IReadOnlySet.cs" Condition="'$(TargetFramework)' != 'net20'" />
+    <Compile Include="TypeForwarding.cs" Condition="'$(TargetFramework)' == 'net462'" />
   </ItemGroup>
 
 </Project>

@@ -20,7 +20,7 @@
     <PackageProjectUrl>https://github.com/mausch/ReadOnlyCollections</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/mausch/ReadOnlyCollections/blob/master/license.txt</PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net20' ">
@@ -32,17 +32,19 @@
   <PropertyGroup Condition="'$(TargetFramework)' == 'net462' ">
     <DefineConstants>$(DefineConstants);LEGACY</DefineConstants>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReadOnlyCollectionsInterfaces\ReadOnlyCollectionsInterfaces.csproj" />
+  </ItemGroup>
   
   <ItemGroup Condition="'$(TargetFramework)' == 'net20'">
     <Reference Include="System" />
     <PackageReference Include="LinqBridge" Version="1.3.0" />
-    <ProjectReference Include="..\ReadOnlyCollectionsInterfaces\ReadOnlyCollectionsInterfaces.csproj" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net35'">
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <ProjectReference Include="..\ReadOnlyCollectionsInterfaces\ReadOnlyCollectionsInterfaces.csproj" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net462'">
@@ -52,6 +54,19 @@
 
   <ItemGroup Condition="'$(TargetFramework)' != 'netstandard1.0' AND '$(TargetFramework)' != 'netstandard2.0'">
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ReadOnlySetWrapper.cs"/>
+    <Compile Include="ArraySegmentWrapper.cs"/>
+    <Compile Include="ExtensionMethods.cs"/>
+    <Compile Include="ReadOnlyCollectionWrapper.cs"/>
+    <Compile Include="ReadOnlyDictionaryWrapper.cs"/>
+    <Compile Include="ReadOnlyListWrapper.cs"/>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' != 'net20'">
+    <Compile Include="ReadOnlySetWrapper.cs"/>
   </ItemGroup>
 
 </Project>
